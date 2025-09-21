@@ -1,0 +1,111 @@
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f8fafc;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #3b82f6, #10b981);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #2563eb, #059669);
+}
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Focus Styles */
+.App *:focus {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
+
+/* Selection Styles */
+::selection {
+  background-color: #bfdbfe;
+  color: #1e40af;
+}
+
+/* Button Hover Effects */
+.App button {
+  transition: all 0.2s ease-in-out;
+}
+
+/* Link Hover Effects */
+.App a {
+  transition: color 0.2s ease-in-out;
+}
+
+/* Card Hover Effects */
+.App [class*="card"] {
+  transition: all 0.3s ease-in-out;
+}
+
+/* Mobile Responsive Font Sizes */
+@media (max-width: 768px) {
+  .App h1 {
+    font-size: 2rem;
+    line-height: 2.5rem;
+  }
+  
+  .App h2 {
+    font-size: 1.75rem;
+    line-height: 2.25rem;
+  }
+}
+
+/* Responsive Navigation */
+@media (min-width: 1024px) {
+  .desktop-nav {
+    display: flex !important;
+  }
+  
+  .mobile-menu-btn {
+    display: none !important;
+  }
+  
+  .desktop-lang-selector {
+    display: block !important;
+  }
+}
+
+@media (max-width: 1023px) {
+  .desktop-nav {
+    display: none !important;
+  }
+  
+  .mobile-menu-btn {
+    display: block !important;
+  }
+}
+
+@media (min-width: 640px) {
+  .desktop-lang-selector {
+    display: block !important;
+  }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .App * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .App header,
+  .App footer,
+  .App [class*="button"] {
+    display: none !important;
+  }
+}
